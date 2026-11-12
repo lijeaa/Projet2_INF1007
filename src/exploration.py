@@ -1,5 +1,6 @@
 import os
 import pandas as pd
+import matplotlib.pyplot as plt
 
 chemin = os.path.join("donnees", "camera_dataset.csv")
 
@@ -19,3 +20,14 @@ print(df.isna().sum())
 
 print("\nStatistiques des colonnes numériques :")
 print(df.describe())
+
+df["Marque"] = df["Model"].str.split().str[0]
+
+print("\nLes marques et leur nombre d'appareils :")
+print(df["Marque"].value_counts())
+
+print("\nNombre de zéros par colonne :")
+print((df["Weight (inc. batteries)"] == 0).sum())
+print((df["Dimensions"] == 0).sum())
+print((df["Max resolution"] == 0).sum())
+print((df["Storage included"] == 0).sum())
