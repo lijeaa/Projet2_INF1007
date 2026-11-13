@@ -2,11 +2,7 @@
 
 | Choix | Options envisagées | Choix retenu et justification |
 | Domaine | Chansons Spotify, logements, photographie | Photographie : prix d'appareils photo. Sujet qui sucite mon interet (photo argentique). Les jeux de données sur l'argentique sont rares, donc on a fini par choisir sur un jeu de données d'appareils numériques. |
-|Jeu de données 
-|
-|
-|
-|
-|
-|
-|
+| Jeu de données | base de ~3 500 appareils reflex/hybrides (format SQLite, pas un CSV prêt à l'emploi), jeu « 1000 Cameras Dataset » | « 1000 Cameras Dataset » (Kaggle, auteur « crawford »). 1038 lignes, 13 colonnes, cible claire : prix. Licence : libre d'utilisation avec crédit. Critères vérifiés avec pandas : lignes, colonnes, types. Aucune donnée personnelle. |
+| Variable catégorielle | Aucune colonne catégorielle dans le jeu d'origine | Colonne 'Marque' créée à partir du premier mot de 'Model' (21 marques). Obligatoire pour avoir une variable catégorielle.|
+| Colonnes d'entrée | Garder les 11 colonnes, ou en choisir quelques-unes | 7 colonnes : Marque, année de sortie, résolution max, pixels effectifs, zoom télé, poids, stockage inclus. Écartées : résolution basse (très proche de résolution max), zoom grand-angle, distances de mise au point (obscures pour un utilisateur), dimensions (unité peu pertinente). Moins de champs rend l'interface plus claire. |
+| Valeurs à 0 | Retirer les colonnes, remplacer par la médiane, retirer les lignes | Retirer les lignes où le poids ou la résolution max valent 0 (21 et 1 cas sur 1038 : l'information est inconnue, un appareil ne pèse pas 0 g). Stockage inclus : zéros conservés (123 cas), car 0 peut signifier « aucune mémoire fournie » , c'est une hypothèse. |
