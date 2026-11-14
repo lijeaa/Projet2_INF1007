@@ -1,0 +1,66 @@
+{
+  "colonnes": [
+    "Marque",
+    "Release date",
+    "Max resolution",
+    "Effective pixels",
+    "Zoom tele (T)",
+    "Weight (inc. batteries)",
+    "Storage included"
+  ],
+  "cible": "Price",
+  "marques": [
+    "Agfa",
+    "Canon",
+    "Casio",
+    "Contax",
+    "Epson",
+    "Fujifilm",
+    "HP",
+    "JVC",
+    "Kodak",
+    "Kyocera",
+    "Leica",
+    "Nikon",
+    "Olympus",
+    "Panasonic",
+    "Pentax",
+    "Ricoh",
+    "Samsung",
+    "Sanyo",
+    "Sigma",
+    "Sony",
+    "Toshiba"
+  ],
+  "intervalles": {
+    "Release date": {
+      "min": 1994.0,
+      "max": 2007.0
+    },
+    "Max resolution": {
+      "min": 512.0,
+      "max": 5616.0
+    },
+    "Effective pixels": {
+      "min": 0.0,
+      "max": 21.0
+    },
+    "Zoom tele (T)": {
+      "min": 0.0,
+      "max": 518.0
+    },
+    "Weight (inc. batteries)": {
+      "min": 100.0,
+      "max": 1860.0
+    },
+    "Storage included": {
+      "min": 0.0,
+      "max": 450.0
+    }
+  },
+  "scores": {
+    "mae": 185.5444499178982,
+    "r2": 0.7221789244546692,
+    "mae_reference": 359.6847290640394
+  }
+}
